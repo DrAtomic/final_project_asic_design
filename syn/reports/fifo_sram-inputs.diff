@@ -1,0 +1,78 @@
+10c10
+< Date   : Sun Feb 20 12:42:25 2022
+---
+> Date   : Sun Feb 20 12:45:15 2022
+12a13,14
+>  * Some/all delay information is back-annotated.
+> 
+14c16
+< Wire Load Model Mode: enclosed
+---
+> Wire Load Model Mode: Inactive.
+16,19c18,20
+<   Startpoint: wdata_in[0]
+<               (input port clocked by wclk2x)
+<   Endpoint: wdata_reg_0_
+<             (rising edge-triggered flip-flop clocked by wclk2x)
+---
+>   Startpoint: winc (input port clocked by wclk)
+>   Endpoint: wptr_full/wfull_reg
+>             (rising edge-triggered flip-flop clocked by wclk)
+23,35c24,42
+<   Des/Clust/Port     Wire Load Model       Library
+<   ------------------------------------------------
+<   fifo1_sram         540000                saed32rvt_ss0p95v125c
+< 
+<   Point                                    Incr       Path
+<   -----------------------------------------------------------
+<   clock wclk2x (rise edge)                 0.00       0.00
+<   clock network delay (ideal)              0.10       0.10
+<   input external delay                     0.00       0.10 r
+<   wdata_in[0] (in)                         0.03       0.13 r
+<   io_r_wdata_in_0_/DOUT (I1025_NS)         0.40       0.52 r
+<   wdata_reg_0_/D (SDFFARX1_RVT)            0.00       0.52 r
+<   data arrival time                                   0.52
+---
+>   Point                                                   Incr       Path
+>   --------------------------------------------------------------------------
+>   clock wclk (rise edge)                                  0.00       0.00
+>   clock network delay (ideal)                             0.10       0.10
+>   input external delay                                    0.00       0.10 r
+>   winc (in)                                               0.03       0.13 r
+>   io_b_winc/DOUT (I1025_NS)                               0.44 *     0.56 r
+>   wptr_full/winc (wptr_full_ADDRSIZE10)                   0.00       0.56 r
+>   wptr_full/U99/Y (AND2X1_RVT)                            0.09 *     0.65 r
+>   wptr_full/U98/Y (AND2X2_RVT)                            0.08 *     0.73 r
+>   wptr_full/U126/Y (OR2X2_RVT)                            0.08 *     0.80 r
+>   wptr_full/U168/Y (AND2X2_RVT)                           0.08 *     0.88 r
+>   wptr_full/U148/Y (MUX21X2_RVT)                          0.10 *     0.98 r
+>   wptr_full/U136/Y (XNOR2X2_RVT)                          0.10 *     1.08 f
+>   wptr_full/U97/Y (INVX8_RVT)                             0.03 *     1.12 r
+>   wptr_full/U92/Y (AND2X1_RVT)                            0.06 *     1.18 r
+>   wptr_full/U9/Y (AND4X1_RVT)                             0.09 *     1.27 r
+>   wptr_full/wfull_reg/D (SDFFARX1_RVT)                    0.00 *     1.27 r
+>   data arrival time                                                  1.27
+37,47c44,54
+<   clock wclk2x (rise edge)                 0.59       0.59
+<   clock network delay (ideal)              0.10       0.69
+<   clock uncertainty                       -0.07       0.62
+<   wdata_reg_0_/CLK (SDFFARX1_RVT)          0.00       0.62 r
+<   library setup time                      -0.16       0.46
+<   data required time                                  0.46
+<   -----------------------------------------------------------
+<   data required time                                  0.46
+<   data arrival time                                  -0.52
+<   -----------------------------------------------------------
+<   slack (VIOLATED)                                   -0.07
+---
+>   clock wclk (rise edge)                                  1.18       1.18
+>   clock network delay (ideal)                             0.10       1.28
+>   clock uncertainty                                      -0.07       1.21
+>   wptr_full/wfull_reg/CLK (SDFFARX1_RVT)                  0.00       1.21 r
+>   library setup time                                     -0.12       1.09
+>   data required time                                                 1.09
+>   --------------------------------------------------------------------------
+>   data required time                                                 1.09
+>   data arrival time                                                 -1.27
+>   --------------------------------------------------------------------------
+>   slack (VIOLATED)                                                  -0.18

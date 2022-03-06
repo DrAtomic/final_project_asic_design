@@ -1,0 +1,75 @@
+10c10
+< Date   : Sun Feb 20 12:42:49 2022
+---
+> Date   : Sun Feb 20 12:45:30 2022
+12a13,14
+>  * Some/all delay information is back-annotated.
+> 
+14c16
+< Wire Load Model Mode: enclosed
+---
+> Wire Load Model Mode: Inactive.
+16c18
+<   Startpoint: wptr_full/wfull_reg
+---
+>   Startpoint: wptr_full/wbin_reg_0_
+23,28d24
+<   Des/Clust/Port     Wire Load Model       Library
+<   ------------------------------------------------
+<   fifo1_sram         540000                saed32rvt_ss0p95v125c
+<   wptr_full_ADDRSIZE10
+<                      8000                  saed32rvt_ss0p95v125c
+< 
+33,49c29,44
+<   wptr_full/wfull_reg/CLK (SDFFASX1_RVT)                  0.00       0.10 r
+<   wptr_full/wfull_reg/Q (SDFFASX1_RVT)                    0.19       0.29 f
+<   wptr_full/U45/Y (AND2X1_RVT)                            0.06       0.35 f
+<   wptr_full/U46/Y (AND2X1_RVT)                            0.05       0.40 f
+<   wptr_full/U47/Y (AND2X1_RVT)                            0.06       0.46 f
+<   wptr_full/U48/Y (INVX0_RVT)                             0.03       0.48 r
+<   wptr_full/U22/Y (OR2X1_RVT)                             0.05       0.54 r
+<   wptr_full/U8/Y (OR2X1_RVT)                              0.07       0.60 r
+<   wptr_full/U4/Y (OR2X1_RVT)                              0.07       0.67 r
+<   wptr_full/U14/Y (INVX0_RVT)                             0.02       0.69 f
+<   wptr_full/U52/Y (NAND2X0_RVT)                           0.04       0.73 r
+<   wptr_full/U18/Y (NAND3X0_RVT)                           0.06       0.79 f
+<   wptr_full/U13/Y (XOR2X1_RVT)                            0.12       0.91 r
+<   wptr_full/U30/Y (NAND4X0_RVT)                           0.06       0.97 f
+<   wptr_full/U23/Y (OR3X1_RVT)                             0.09       1.06 f
+<   wptr_full/wfull_reg/D (SDFFASX1_RVT)                    0.00       1.06 f
+<   data arrival time                                                  1.06
+---
+>   wptr_full/wbin_reg_0_/CLK (SDFFARX1_RVT)                0.00       0.10 r
+>   wptr_full/wbin_reg_0_/Q (SDFFARX1_RVT)                  0.21       0.31 f
+>   wptr_full/U5/Y (AND3X1_RVT)                             0.09 *     0.40 f
+>   wptr_full/U192/Y (NBUFFX8_RVT)                          0.07 *     0.48 f
+>   wptr_full/U18/Y (AND3X1_RVT)                            0.07 *     0.55 f
+>   wptr_full/U15/Y (AND2X1_RVT)                            0.06 *     0.61 f
+>   wptr_full/U13/Y (NAND2X4_RVT)                           0.11 *     0.72 r
+>   wptr_full/U141/Y (XNOR2X2_RVT)                          0.10 *     0.82 r
+>   wptr_full/U107/Y (MUX21X2_RVT)                          0.10 *     0.92 r
+>   wptr_full/U106/Y (INVX4_RVT)                            0.03 *     0.94 f
+>   wptr_full/U125/Y (INVX8_RVT)                            0.03 *     0.97 r
+>   wptr_full/U180/Y (XNOR2X2_RVT)                          0.09 *     1.07 r
+>   wptr_full/U10/Y (AND2X1_RVT)                            0.05 *     1.12 r
+>   wptr_full/U9/Y (AND4X1_RVT)                             0.08 *     1.19 r
+>   wptr_full/wfull_reg/D (SDFFARX1_RVT)                    0.00 *     1.19 r
+>   data arrival time                                                  1.19
+54,56c49,51
+<   wptr_full/wfull_reg/CLK (SDFFASX1_RVT)                  0.00       1.21 r
+<   library setup time                                     -0.10       1.11
+<   data required time                                                 1.11
+---
+>   wptr_full/wfull_reg/CLK (SDFFARX1_RVT)                  0.00       1.21 r
+>   library setup time                                     -0.12       1.09
+>   data required time                                                 1.09
+58,59c53,54
+<   data required time                                                 1.11
+<   data arrival time                                                 -1.06
+---
+>   data required time                                                 1.09
+>   data arrival time                                                 -1.19
+61c56
+<   slack (MET)                                                        0.05
+---
+>   slack (VIOLATED)                                                  -0.10

@@ -1,0 +1,74 @@
+10c10
+< Date   : Sun Feb 20 12:43:05 2022
+---
+> Date   : Sun Feb 20 12:45:44 2022
+12a13,14
+>  * Some/all delay information is back-annotated.
+> 
+14c16
+< Wire Load Model Mode: enclosed
+---
+> Wire Load Model Mode: Inactive.
+16c18
+<   Startpoint: rptr_empty/rbin_reg_3_
+---
+>   Startpoint: rptr_empty/rempty_reg
+23,28d24
+<   Des/Clust/Port     Wire Load Model       Library
+<   ------------------------------------------------
+<   fifo1_sram         540000                saed32rvt_ss0p95v125c
+<   rptr_empty_ADDRSIZE10
+<                      8000                  saed32rvt_ss0p95v125c
+< 
+33,47c29,45
+<   rptr_empty/rbin_reg_3_/CLK (SDFFARX1_RVT)               0.00       0.10 r
+<   rptr_empty/rbin_reg_3_/Q (SDFFARX1_RVT)                 0.21       0.31 r
+<   rptr_empty/U49/Y (AND4X1_RVT)                           0.10       0.40 r
+<   rptr_empty/U47/Y (AND2X1_RVT)                           0.06       0.46 r
+<   rptr_empty/U9/Y (NAND3X0_RVT)                           0.06       0.52 f
+<   rptr_empty/U64/Y (NAND2X0_RVT)                          0.09       0.60 r
+<   rptr_empty/U65/Y (AND2X1_RVT)                           0.07       0.67 r
+<   rptr_empty/U69/Y (NAND2X0_RVT)                          0.03       0.71 f
+<   rptr_empty/U72/Y (NAND2X0_RVT)                          0.05       0.76 r
+<   rptr_empty/U95/Y (XOR2X1_RVT)                           0.12       0.88 f
+<   rptr_empty/U96/Y (OR3X1_RVT)                            0.07       0.95 f
+<   rptr_empty/U100/Y (NOR2X0_RVT)                          0.07       1.03 r
+<   rptr_empty/U101/Y (AND3X1_RVT)                          0.06       1.09 r
+<   rptr_empty/rempty_reg/D (SDFFASX1_RVT)                  0.00       1.09 r
+<   data arrival time                                                  1.09
+---
+>   rptr_empty/rempty_reg/CLK (SDFFASX2_RVT)                0.00       0.10 r
+>   rptr_empty/rempty_reg/QN (SDFFASX2_RVT)                 0.22       0.32 r
+>   rptr_empty/U11/Y (NBUFFX8_RVT)                          0.08 *     0.40 r
+>   rptr_empty/U144/Y (AND3X1_RVT)                          0.09 *     0.49 r
+>   rptr_empty/U127/Y (AND3X1_RVT)                          0.08 *     0.56 r
+>   rptr_empty/U117/Y (NBUFFX8_RVT)                         0.06 *     0.62 r
+>   rptr_empty/U126/Y (INVX16_RVT)                          0.02 *     0.65 f
+>   rptr_empty/U110/Y (OR2X2_RVT)                           0.06 *     0.71 f
+>   rptr_empty/U33/Y (AND2X2_RVT)                           0.09 *     0.79 f
+>   rptr_empty/U166/Y (NBUFFX8_RVT)                         0.07 *     0.86 f
+>   rptr_empty/U145/Y (AO22X1_RVT)                          0.08 *     0.94 f
+>   rptr_empty/U114/Y (XNOR2X2_RVT)                         0.09 *     1.03 r
+>   rptr_empty/U112/Y (AND2X1_RVT)                          0.05 *     1.08 r
+>   rptr_empty/U10/Y (AND3X1_RVT)                           0.06 *     1.14 r
+>   rptr_empty/U9/Y (AND3X1_RVT)                            0.07 *     1.21 r
+>   rptr_empty/rempty_reg/D (SDFFASX2_RVT)                  0.00 *     1.21 r
+>   data arrival time                                                  1.21
+52,54c50,52
+<   rptr_empty/rempty_reg/CLK (SDFFASX1_RVT)                0.00       1.25 r
+<   library setup time                                     -0.11       1.14
+<   data required time                                                 1.14
+---
+>   rptr_empty/rempty_reg/CLK (SDFFASX2_RVT)                0.00       1.25 r
+>   library setup time                                     -0.13       1.12
+>   data required time                                                 1.12
+56,57c54,55
+<   data required time                                                 1.14
+<   data arrival time                                                 -1.09
+---
+>   data required time                                                 1.12
+>   data arrival time                                                 -1.21
+59c57
+<   slack (MET)                                                        0.05
+---
+>   slack (VIOLATED)                                                  -0.09

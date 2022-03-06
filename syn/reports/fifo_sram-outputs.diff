@@ -1,0 +1,58 @@
+10c10
+< Date   : Sun Feb 20 12:41:43 2022
+---
+> Date   : Sun Feb 20 12:44:44 2022
+12a13,14
+>  * Some/all delay information is back-annotated.
+> 
+14c16
+< Wire Load Model Mode: enclosed
+---
+> Wire Load Model Mode: Inactive.
+16c18
+<   Startpoint: fifomem/genblk1_2__U
+---
+>   Startpoint: fifomem/genblk1_7__U
+18c20
+<   Endpoint: rdata[0] (output port clocked by rclk)
+---
+>   Endpoint: rdata[4] (output port clocked by rclk)
+22,27d23
+<   Des/Clust/Port     Wire Load Model       Library
+<   ------------------------------------------------
+<   fifo1_sram         540000                saed32rvt_ss0p95v125c
+<   fifomem_DATASIZE8_ADDRSIZE10
+<                      70000                 saed32rvt_ss0p95v125c
+< 
+32,41c28,39
+<   fifomem/genblk1_2__U/CE2 (SRAM2RW128x8)                 0.00       0.10 r
+<   fifomem/genblk1_2__U/O2[0] (SRAM2RW128x8)               0.09       0.19 f
+<   fifomem/U6/Y (NAND4X0_RVT)                              0.05       0.24 r
+<   fifomem/U5/Y (INVX1_RVT)                                0.02       0.26 f
+<   fifomem/U26/Y (AND2X1_RVT)                              0.06       0.32 f
+<   fifomem/rdata[0] (fifomem_DATASIZE8_ADDRSIZE10)         0.00       0.32 f
+<   U16/Y (NBUFFX8_RVT)                                     0.06       0.38 f
+<   io_l_rdata_0_/PADIO (D8I1025_NS)                        1.38       1.76 f
+<   rdata[0] (out)                                          0.00       1.76 f
+<   data arrival time                                                  1.76
+---
+>   fifomem/genblk1_7__U/CE2 (SRAM2RW128x8)                 0.00       0.10 r
+>   fifomem/genblk1_7__U/O2[4] (SRAM2RW128x8)               0.21       0.31 f
+>   fifomem/U8/Y (NAND4X0_RVT)                              0.11 *     0.42 r
+>   fifomem/U115/Y (INVX2_RVT)                              0.03 *     0.45 f
+>   fifomem/U108/Y (INVX4_RVT)                              0.05 *     0.50 r
+>   fifomem/U96/Y (OR2X2_RVT)                               0.07 *     0.57 r
+>   fifomem/U95/Y (INVX4_RVT)                               0.02 *     0.59 f
+>   fifomem/U118/Y (NBUFFX32_RVT)                           0.06 *     0.64 f
+>   fifomem/rdata[4] (fifomem_DATASIZE8_ADDRSIZE10)         0.00       0.64 f
+>   io_l_rdata_4_/PADIO (D8I1025_NS)                        1.40 *     2.04 f
+>   rdata[4] (out)                                          0.00 *     2.04 f
+>   data arrival time                                                  2.04
+50c48
+<   data arrival time                                                 -1.76
+---
+>   data arrival time                                                 -2.04
+52c50
+<   slack (VIOLATED)                                                  -0.01
+---
+>   slack (VIOLATED)                                                  -0.29
