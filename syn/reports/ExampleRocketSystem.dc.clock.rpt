@@ -1,0 +1,116 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -group clock
+        -max_paths 1
+Design : ExampleRocketSystem
+Version: Q-2019.12-SP3
+Date   : Sun Mar  6 15:24:57 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss0p95vn40c   Library: saed32rvt_ss0p95vn40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: tile/fpuOpt/sfma/in_in2_reg_27_
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: tile/fpuOpt/sfma/fma/u_T_5_reg_48_
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ExampleRocketSystem
+                     2000000               saed32rvt_ss0p95vn40c
+  FPUFMAPipe         16000                 saed32rvt_ss0p95vn40c
+  MulAddRecFNToRaw_preMul
+                     8000                  saed32rvt_ss0p95vn40c
+  MulAddRecFNPipe    16000                 saed32rvt_ss0p95vn40c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clock (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.90       0.90
+  tile/fpuOpt/sfma/in_in2_reg_27_/CLK (SDFFX1_RVT)        0.00 #     0.90 r
+  tile/fpuOpt/sfma/in_in2_reg_27_/Q (SDFFX1_RVT)          0.22       1.12 f
+  tile/fpuOpt/sfma/fma/io_b[27] (MulAddRecFNPipe)         0.00       1.12 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/io_b[27] (MulAddRecFNToRaw_preMul)
+                                                          0.00       1.12 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U33/Y (XNOR2X1_RVT)
+                                                          0.15       1.27 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U186/S (FADDX1_RVT)
+                                                          0.17       1.44 r
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U44/Y (OR2X1_RVT)
+                                                          0.07       1.51 r
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U31/Y (INVX0_RVT)
+                                                          0.03       1.53 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U187/Y (NOR2X1_RVT)
+                                                          0.07       1.61 r
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U142/Y (AO21X1_RVT)
+                                                          0.09       1.69 r
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U204/Y (AO21X1_RVT)
+                                                          0.10       1.79 r
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U24/Y (XNOR2X1_RVT)
+                                                          0.11       1.90 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U36/Y (AND2X1_RVT)
+                                                          0.06       1.96 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U35/Y (AND3X1_RVT)
+                                                          0.08       2.04 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U34/Y (AND2X1_RVT)
+                                                          0.07       2.11 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U235/Y (AND2X1_RVT)
+                                                          0.07       2.19 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U22/Y (AND2X2_RVT)
+                                                          0.11       2.30 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U271/Y (NAND2X0_RVT)
+                                                          0.07       2.36 r
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U272/Y (NAND4X0_RVT)
+                                                          0.11       2.48 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U274/Y (NAND2X0_RVT)
+                                                          0.08       2.56 r
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U16/Y (NAND4X1_RVT)
+                                                          0.16       2.71 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U342/Y (AOI22X1_RVT)
+                                                          0.11       2.82 r
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U345/Y (NAND3X0_RVT)
+                                                          0.05       2.88 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U346/Y (NAND2X0_RVT)
+                                                          0.07       2.95 r
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/U67/Y (NAND3X0_RVT)
+                                                          0.07       3.02 f
+  tile/fpuOpt/sfma/fma/mulAddRecFNToRaw_preMul/io_mulAddC[24] (MulAddRecFNToRaw_preMul)
+                                                          0.00       3.02 f
+  tile/fpuOpt/sfma/fma/U1130/S (FADDX1_RVT)               0.20       3.21 r
+  tile/fpuOpt/sfma/fma/U1317/Y (NAND2X0_RVT)              0.06       3.27 f
+  tile/fpuOpt/sfma/fma/U38/Y (OAI21X2_RVT)                0.15       3.42 r
+  tile/fpuOpt/sfma/fma/U1322/Y (AOI21X1_RVT)              0.10       3.52 f
+  tile/fpuOpt/sfma/fma/U16/Y (OAI21X2_RVT)                0.12       3.64 r
+  tile/fpuOpt/sfma/fma/U102/Y (NAND2X0_RVT)               0.04       3.68 f
+  tile/fpuOpt/sfma/fma/U101/Y (NAND2X0_RVT)               0.04       3.72 r
+  tile/fpuOpt/sfma/fma/U39/Y (AO21X2_RVT)                 0.08       3.80 r
+  tile/fpuOpt/sfma/fma/U100/Y (NAND2X0_RVT)               0.04       3.85 f
+  tile/fpuOpt/sfma/fma/U99/Y (NAND2X0_RVT)                0.06       3.91 r
+  tile/fpuOpt/sfma/fma/U197/Y (XNOR2X1_RVT)               0.13       4.03 r
+  tile/fpuOpt/sfma/fma/U238/Y (NAND2X0_RVT)               0.04       4.07 f
+  tile/fpuOpt/sfma/fma/U236/Y (NAND2X0_RVT)               0.05       4.12 r
+  tile/fpuOpt/sfma/fma/u_T_5_reg_48_/D (SDFFX1_RVT)       0.00       4.12 r
+  data arrival time                                                  4.12
+
+  clock clock (rise edge)                                 3.50       3.50
+  clock network delay (ideal)                             0.90       4.40
+  clock uncertainty                                      -0.16       4.24
+  tile/fpuOpt/sfma/fma/u_T_5_reg_48_/CLK (SDFFX1_RVT)     0.00       4.24 r
+  library setup time                                     -0.12       4.12
+  data required time                                                 4.12
+  --------------------------------------------------------------------------
+  data required time                                                 4.12
+  data arrival time                                                 -4.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
