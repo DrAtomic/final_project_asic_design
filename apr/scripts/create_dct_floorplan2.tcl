@@ -20,7 +20,9 @@ source -echo -verbose ../../${top_design}.design_options.tcl
 
 # Use the def saved when planning macro placement in apr area.
 set def ../outputs/${top_design}.floorplan.macros.def 
-create_voltage_area -power_domains PD_RISC_CORE -region {{11 400} {450 640}}
+if { ${top_design} == "ORCA_TOP" } {
+	create_voltage_area -power_domains PD_RISC_CORE -region {{11 400} {450 640}}
+}
 source -echo -verbose ../scripts/floorplan2.tcl
 #read_def ../outputs/${top_design}.floorplan.def
 
