@@ -57,9 +57,10 @@ defOut -noStdCells "../outputs/${top_design}.floorplan.innovus.def"
 deselectAll
 select_obj [ get_ports * ]
 select_obj [ get_db insts -if ".is_black_box==true" ]
+select_obj [ get_db insts * -if ".base_cell.name==SRAM*&&.place_status==unplaced" ]
 select_obj [ get_db insts -if ".is_pad==true" ]
-#defOut -selected "../outputs/${top_design}.floorplan.innovus.macros.def"
-
+defOut -selected "../outputs/${top_design}.floorplan.innovus.macros.def"
+placeAIO
 
 
 puts "Logfile message: writing def file completed ..."
