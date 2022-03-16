@@ -4,7 +4,7 @@ Information: Updating design information... (UID-85)
 Report : qor
 Design : fifo1_sram
 Version: Q-2019.12-SP3
-Date   : Sun Mar  6 14:38:24 2022
+Date   : Thu Mar 10 17:49:30 2022
 ****************************************
 
 
@@ -107,12 +107,12 @@ Date   : Sun Mar  6 14:38:24 2022
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                    0.05
-  Logic Optimization:                  1.89
-  Mapping Optimization:               56.06
+  Resource Sharing:                    0.04
+  Logic Optimization:                  1.80
+  Mapping Optimization:               55.78
   -----------------------------------------
-  Overall Compile Time:               68.14
-  Overall Compile Wall Clock Time:    72.10
+  Overall Compile Time:               67.84
+  Overall Compile Wall Clock Time:    71.73
 
   --------------------------------------------------------------------
 

@@ -3,11 +3,13 @@
 Report : timing
         -path full
         -delay max
-        -group INPUTS
+        -input_pins
         -max_paths 1
+        -transition_time
+        -capacitance
 Design : fifo1_sram
 Version: Q-2019.12-SP3
-Date   : Sun Mar  6 19:09:49 2022
+Date   : Tue Mar 15 17:18:54 2022
 ****************************************
 
 Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
@@ -24,27 +26,29 @@ Wire Load Model Mode: enclosed
   ------------------------------------------------
   fifo1_sram         540000                saed32rvt_ss0p95v125c
 
-  Point                                    Incr       Path
-  -----------------------------------------------------------
-  clock wclk2x (rise edge)                 0.00       0.00
-  clock network delay (ideal)              0.10       0.10
-  input external delay                     0.00       0.10 r
-  wdata_in[0] (in)                         0.03       0.13 r
-  io_r_wdata_in_0_/DOUT (I1025_NS)         0.40       0.52 r
-  wdata_reg_0_/D (SDFFARX1_RVT)            0.00       0.52 r
-  data arrival time                                   0.52
+  Point                           Cap     Trans      Incr       Path
+  ---------------------------------------------------------------------
+  clock wclk2x (rise edge)                           0.00       0.00
+  clock network delay (ideal)                        0.10       0.10
+  input external delay                               0.00       0.10 r
+  wdata_in[0] (in)            2505.92      0.03      0.03       0.13 r
+  io_r_wdata_in_0_/PADIO (I1025_NS)        0.03      0.00       0.13 r
+  io_r_wdata_in_0_/DOUT (I1025_NS) <-
+                                 0.51      0.18      0.40       0.52 r
+  wdata_reg_0_/D (SDFFARX1_RVT)            0.18      0.00       0.52 r
+  data arrival time                                             0.52
 
-  clock wclk2x (rise edge)                 0.59       0.59
-  clock network delay (ideal)              0.10       0.69
-  clock uncertainty                       -0.07       0.62
-  wdata_reg_0_/CLK (SDFFARX1_RVT)          0.00       0.62 r
-  library setup time                      -0.16       0.46
-  data required time                                  0.46
-  -----------------------------------------------------------
-  data required time                                  0.46
-  data arrival time                                  -0.52
-  -----------------------------------------------------------
-  slack (VIOLATED)                                   -0.07
+  clock wclk2x (rise edge)                           0.59       0.59
+  clock network delay (ideal)                        0.10       0.69
+  clock uncertainty                                 -0.07       0.62
+  wdata_reg_0_/CLK (SDFFARX1_RVT)                    0.00       0.62 r
+  library setup time                                -0.16       0.46
+  data required time                                            0.46
+  ---------------------------------------------------------------------
+  data required time                                            0.46
+  data arrival time                                            -0.52
+  ---------------------------------------------------------------------
+  slack (VIOLATED)                                             -0.07
 
 
 1
