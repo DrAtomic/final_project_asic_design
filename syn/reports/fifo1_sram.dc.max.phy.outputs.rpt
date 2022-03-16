@@ -1,0 +1,63 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : fifo1_sram
+Version: Q-2019.12-SP3
+Date   : Tue Mar 15 22:22:15 2022
+****************************************
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: fifomem/genblk1_7__U
+              (rising edge-triggered flip-flop clocked by rclk)
+  Endpoint: rdata[4] (output port clocked by rclk)
+  Path Group: OUTPUTS
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  fifo1_sram         540000                saed32rvt_ss0p95v125c
+  fifomem_DATASIZE8_ADDRSIZE10
+                     70000                 saed32rvt_ss0p95v125c
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock rclk (rise edge)                                            0.00       0.00
+  clock network delay (ideal)                                       0.10       0.10
+  fifomem/genblk1_7__U/CE2 (SRAM2RW128x8)                 0.10      0.00       0.10 r
+  fifomem/genblk1_7__U/O2[4] (SRAM2RW128x8) <-
+                                                0.59      0.03      0.09       0.19 f
+  fifomem/U36/A2 (NAND4X0_RVT)                            0.03      0.00       0.19 f
+  fifomem/U36/Y (NAND4X0_RVT)                   0.59      0.05      0.04       0.23 r
+  fifomem/U37/A (INVX0_RVT)                               0.05      0.00       0.23 r
+  fifomem/U37/Y (INVX0_RVT)                     0.61      0.03      0.02       0.26 f
+  fifomem/U38/A1 (AND2X1_RVT)                             0.03      0.00       0.26 f
+  fifomem/U38/Y (AND2X1_RVT)                    1.42      0.03      0.06       0.31 f
+  fifomem/rdata[4] (fifomem_DATASIZE8_ADDRSIZE10)                   0.00       0.31 f
+  U19/A (NBUFFX8_RVT)                                     0.03      0.00       0.31 f
+  U19/Y (NBUFFX8_RVT)                          21.85      0.04      0.06       0.37 f
+  io_l_rdata_4_/DIN (D8I1025_NS)                          0.04      0.00       0.37 f
+  io_l_rdata_4_/PADIO (D8I1025_NS)           1433.81      0.89      1.38       1.75 f
+  rdata[4] (out)                                          0.89      0.00       1.75 f
+  data arrival time                                                            1.75
+
+  clock rclk (rise edge)                                            1.22       1.22
+  clock network delay (ideal)                                       0.10       1.32
+  clock uncertainty                                                -0.07       1.25
+  output external delay                                             0.50       1.75
+  data required time                                                           1.75
+  ------------------------------------------------------------------------------------
+  data required time                                                           1.75
+  data arrival time                                                           -1.75
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                                0.00
+
+
+1

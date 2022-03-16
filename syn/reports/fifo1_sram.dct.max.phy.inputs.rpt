@@ -1,0 +1,69 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : fifo1_sram
+Version: Q-2019.12-SP3
+Date   : Tue Mar 15 21:40:08 2022
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: Inactive.
+
+  Startpoint: winc (input port clocked by wclk)
+  Endpoint: wptr_full/wfull_reg
+            (rising edge-triggered flip-flop clocked by wclk)
+  Path Group: INPUTS
+  Path Type: max
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock wclk (rise edge)                                            0.00       0.00
+  clock network delay (ideal)                                       0.10       0.10
+  input external delay                                              0.00       0.10 r
+  winc (in)                                  2505.91      0.03      0.03       0.13 r
+  io_b_winc/PADIO (I1025_NS)                              0.03      0.00 *     0.13 r
+  io_b_winc/DOUT (I1025_NS) <-                 66.11      0.22      0.44       0.56 r
+  wptr_full/winc (wptr_full_ADDRSIZE10)                             0.00       0.56 r
+  wptr_full/U99/A2 (AND2X1_RVT)                           0.22      0.01 *     0.58 r
+  wptr_full/U99/Y (AND2X1_RVT)                  0.66      0.04      0.07       0.65 r
+  wptr_full/U98/A1 (AND2X2_RVT)                           0.04      0.00 *     0.65 r
+  wptr_full/U98/Y (AND2X2_RVT)                  4.61      0.04      0.08       0.73 r
+  wptr_full/U126/A2 (OR2X2_RVT)                           0.04      0.00 *     0.73 r
+  wptr_full/U126/Y (OR2X2_RVT)                  6.24      0.05      0.08       0.80 r
+  wptr_full/U168/A1 (AND2X2_RVT)                          0.05      0.00 *     0.80 r
+  wptr_full/U168/Y (AND2X2_RVT)                 4.09      0.04      0.08       0.88 r
+  wptr_full/U148/A1 (MUX21X2_RVT)                         0.04      0.00 *     0.88 r
+  wptr_full/U148/Y (MUX21X2_RVT)                2.37      0.04      0.10       0.98 r
+  wptr_full/U136/A1 (XNOR2X2_RVT)                         0.04      0.00 *     0.98 r
+  wptr_full/U136/Y (XNOR2X2_RVT)                5.44      0.05      0.10       1.08 f
+  wptr_full/U97/A (INVX8_RVT)                             0.05      0.00 *     1.08 f
+  wptr_full/U97/Y (INVX8_RVT)                  15.27      0.03      0.03       1.12 r
+  wptr_full/U92/A2 (AND2X1_RVT)                           0.03      0.00 *     1.12 r
+  wptr_full/U92/Y (AND2X1_RVT)                  1.30      0.03      0.06       1.18 r
+  wptr_full/U9/A4 (AND4X1_RVT)                            0.03      0.00 *     1.18 r
+  wptr_full/U9/Y (AND4X1_RVT)                   0.95      0.04      0.09       1.27 r
+  wptr_full/wfull_reg/D (SDFFARX1_RVT)                    0.04      0.00 *     1.27 r
+  data arrival time                                                            1.27
+
+  clock wclk (rise edge)                                            1.18       1.18
+  clock network delay (ideal)                                       0.10       1.28
+  clock uncertainty                                                -0.07       1.21
+  wptr_full/wfull_reg/CLK (SDFFARX1_RVT)                            0.00       1.21 r
+  library setup time                                               -0.12       1.09
+  data required time                                                           1.09
+  ------------------------------------------------------------------------------------
+  data required time                                                           1.09
+  data arrival time                                                           -1.27
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.18
+
+
+1

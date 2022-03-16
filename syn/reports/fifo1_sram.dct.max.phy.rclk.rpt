@@ -1,0 +1,74 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : fifo1_sram
+Version: Q-2019.12-SP3
+Date   : Tue Mar 15 22:08:37 2022
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: Inactive.
+
+  Startpoint: rptr_empty/rbin_reg_3_
+              (rising edge-triggered flip-flop clocked by rclk)
+  Endpoint: rptr_empty/rempty_reg
+            (rising edge-triggered flip-flop clocked by rclk)
+  Path Group: rclk
+  Path Type: max
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock rclk (rise edge)                                            0.00       0.00
+  clock network delay (ideal)                                       0.10       0.10
+  rptr_empty/rbin_reg_3_/CLK (SDFFARX1_RVT)               0.10      0.00       0.10 r
+  rptr_empty/rbin_reg_3_/Q (SDFFARX1_RVT) <-
+                                                1.81      0.04      0.21       0.31 r
+  rptr_empty/U160/A (NBUFFX8_RVT)                         0.04      0.00 *     0.31 r
+  rptr_empty/U160/Y (NBUFFX8_RVT)              36.98      0.05      0.08       0.38 r
+  rptr_empty/raddr[3] (rptr_empty_ADDRSIZE10)                       0.00       0.38 r
+  rptr_empty/IN6 (rptr_empty_ADDRSIZE10)                            0.00       0.38 r
+  rptr_empty/U75/A2 (NAND4X0_RVT)                         0.05      0.01 *     0.39 r
+  rptr_empty/U75/Y (NAND4X0_RVT)                1.47      0.09      0.08       0.47 f
+  rptr_empty/U73/A (INVX2_RVT)                            0.09      0.00 *     0.47 f
+  rptr_empty/U73/Y (INVX2_RVT)                  6.35      0.06      0.06       0.53 r
+  rptr_empty/U89/A1 (AND3X2_RVT)                          0.06      0.00 *     0.53 r
+  rptr_empty/U89/Y (AND3X2_RVT)                 5.84      0.06      0.10       0.63 r
+  rptr_empty/U170/A1 (NAND2X4_RVT)                        0.06      0.00 *     0.63 r
+  rptr_empty/U170/Y (NAND2X4_RVT)              12.49      0.04      0.10       0.73 f
+  rptr_empty/U106/A1 (XNOR2X2_RVT)                        0.04      0.00 *     0.73 f
+  rptr_empty/U106/Y (XNOR2X2_RVT)               0.71      0.03      0.09       0.83 r
+  rptr_empty/U79/A1 (NAND2X0_RVT)                         0.03      0.00 *     0.83 r
+  rptr_empty/U79/Y (NAND2X0_RVT)                0.59      0.04      0.03       0.86 f
+  rptr_empty/U99/A1 (NAND2X4_RVT)                         0.04      0.00 *     0.86 f
+  rptr_empty/U99/Y (NAND2X4_RVT)               10.00      0.04      0.10       0.96 r
+  rptr_empty/U157/A1 (XNOR2X2_RVT)                        0.04      0.00 *     0.96 r
+  rptr_empty/U157/Y (XNOR2X2_RVT)               0.61      0.03      0.09       1.05 r
+  rptr_empty/U130/A3 (AND3X1_RVT)                         0.03      0.00 *     1.05 r
+  rptr_empty/U130/Y (AND3X1_RVT)                0.52      0.03      0.07       1.11 r
+  rptr_empty/U9/A3 (AND3X1_RVT)                           0.03      0.00 *     1.11 r
+  rptr_empty/U9/Y (AND3X1_RVT)                  1.62      0.04      0.07       1.19 r
+  rptr_empty/rempty_reg/D (SDFFASX2_RVT)                  0.04      0.00 *     1.19 r
+  data arrival time                                                            1.19
+
+  clock rclk (rise edge)                                            1.22       1.22
+  clock network delay (ideal)                                       0.10       1.32
+  clock uncertainty                                                -0.07       1.25
+  rptr_empty/rempty_reg/CLK (SDFFASX2_RVT)                          0.00       1.25 r
+  library setup time                                               -0.13       1.12
+  data required time                                                           1.12
+  ------------------------------------------------------------------------------------
+  data required time                                                           1.12
+  data arrival time                                                           -1.19
+  ------------------------------------------------------------------------------------
+  slack (VIOLATED)                                                            -0.06
+
+
+1
