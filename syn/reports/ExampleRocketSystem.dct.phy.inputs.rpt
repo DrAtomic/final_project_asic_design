@@ -1,0 +1,232 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : ExampleRocketSystem
+Version: Q-2019.12-SP3
+Date   : Wed Mar 16 20:32:28 2022
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss0p95vn40c   Library: saed32rvt_ss0p95vn40c
+Wire Load Model Mode: Inactive.
+
+  Startpoint: mem_axi4_0_b_bits_id[3]
+              (input port clocked by clock)
+  Endpoint: sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/u_T_14_reg_2_
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: INPUTS
+  Path Type: max
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.90       0.90
+  input external delay                                              0.00       0.90 f
+  mem_axi4_0_b_bits_id[3] (in)                 70.54      0.13      0.07       0.98 f
+  mbus/auto_coupler_to_memory_controller_named_axi4_axi4yank_out_b_bits_id[3] (MemoryBus)
+                                                                    0.00       0.98 f
+  mbus/coupler_to_memory_controller_named_axi4/auto_axi4yank_out_b_bits_id[3] (SimpleLazyModule_6)
+                                                                    0.00       0.98 f
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/auto_out_b_bits_id[3] (AXI4UserYanker_2)
+                                                                    0.00       0.98 f
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/U84/A (INVX2_RVT)
+                                                          0.14      0.04 *     1.02 f
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/U84/Y (INVX2_RVT)
+                                                0.64      0.06      0.05       1.07 r
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/U34/A2 (AND2X2_RVT)
+                                                          0.06      0.00 *     1.07 r
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/U34/Y (AND2X2_RVT)
+                                                5.94      0.05      0.10       1.18 r
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/U83/A3 (NAND3X0_RVT)
+                                                          0.05      0.00 *     1.18 r
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/U83/Y (NAND3X0_RVT)
+                                                1.89      0.10      0.09       1.27 f
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/U41/A (INVX1_RVT)
+                                                          0.10      0.00 *     1.27 f
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/U41/Y (INVX1_RVT)
+                                                3.95      0.07      0.08       1.35 r
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/U69/A1 (AO22X1_RVT)
+                                                          0.07      0.00 *     1.35 r
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/U69/Y (AO22X1_RVT)
+                                                0.82      0.03      0.10       1.45 r
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/U70/A2 (OA21X1_RVT)
+                                                          0.03      0.00 *     1.45 r
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/U70/Y (OA21X1_RVT)
+                                                0.95      0.03      0.08       1.53 r
+  mbus/coupler_to_memory_controller_named_axi4/axi4yank/auto_in_b_bits_user[0] (AXI4UserYanker_2)
+                                                                    0.00       1.53 r
+  mbus/coupler_to_memory_controller_named_axi4/axi4index/auto_out_b_bits_user[0] (AXI4IdIndexer_2)
+                                                                    0.00       1.53 r
+  mbus/coupler_to_memory_controller_named_axi4/axi4index/auto_in_b_bits_user[0] (AXI4IdIndexer_2)
+                                                                    0.00       1.53 r
+  mbus/coupler_to_memory_controller_named_axi4/tl2axi4/auto_out_b_bits_user[0] (TLToAXI4_1)
+                                                                    0.00       1.53 r
+  mbus/coupler_to_memory_controller_named_axi4/tl2axi4/U23/A3 (AO22X2_RVT)
+                                                          0.03      0.00 *     1.53 r
+  mbus/coupler_to_memory_controller_named_axi4/tl2axi4/U23/Y (AO22X2_RVT)
+                                                6.37      0.07      0.11       1.64 r
+  mbus/coupler_to_memory_controller_named_axi4/tl2axi4/auto_in_d_bits_source[0] (TLToAXI4_1)
+                                                                    0.00       1.64 r
+  mbus/coupler_to_memory_controller_named_axi4/widget/auto_out_d_bits_source[0] (TLWidthWidget_4)
+                                                                    0.00       1.64 r
+  mbus/coupler_to_memory_controller_named_axi4/widget/U2/A (NBUFFX8_RVT)
+                                                          0.07      0.00 *     1.64 r
+  mbus/coupler_to_memory_controller_named_axi4/widget/U2/Y (NBUFFX8_RVT)
+                                               34.63      0.05      0.09       1.73 r
+  mbus/coupler_to_memory_controller_named_axi4/widget/auto_in_d_bits_source[0] (TLWidthWidget_4)
+                                                                    0.00       1.73 r
+  mbus/coupler_to_memory_controller_named_axi4/buffer/auto_out_d_bits_source[0] (TLBuffer_6)
+                                                                    0.00       1.73 r
+  mbus/coupler_to_memory_controller_named_axi4/buffer/auto_in_d_bits_source[0] (TLBuffer_6)
+                                                                    0.00       1.73 r
+  mbus/coupler_to_memory_controller_named_axi4/picker/auto_out_d_bits_source[0] (ProbePicker)
+                                                                    0.00       1.73 r
+  mbus/coupler_to_memory_controller_named_axi4/picker/auto_in_d_bits_source[0] (ProbePicker)
+                                                                    0.00       1.73 r
+  mbus/coupler_to_memory_controller_named_axi4/auto_picker_in_d_bits_source[0] (SimpleLazyModule_6)
+                                                                    0.00       1.73 r
+  mbus/memory_bus_xbar/auto_out_d_bits_source[0] (TLXbar_4)         0.00       1.73 r
+  mbus/memory_bus_xbar/auto_in_d_bits_source[0] (TLXbar_4)          0.00       1.73 r
+  mbus/coupler_from_coherence_manager/auto_binder_out_d_bits_source[0] (SimpleLazyModule_7)
+                                                                    0.00       1.73 r
+  mbus/coupler_from_coherence_manager/binder/auto_out_d_bits_source[0] (BankBinder)
+                                                                    0.00       1.73 r
+  mbus/coupler_from_coherence_manager/binder/auto_in_d_bits_source[0] (BankBinder)
+                                                                    0.00       1.73 r
+  mbus/coupler_from_coherence_manager/auto_binder_in_d_bits_source[0] (SimpleLazyModule_7)
+                                                                    0.00       1.73 r
+  mbus/auto_coupler_from_coherence_manager_binder_in_d_bits_source[0] (MemoryBus)
+                                                                    0.00       1.73 r
+  shrinker/auto_out_d_bits_source[0] (TLSourceShrinker)             0.00       1.73 r
+  shrinker/U5/A (INVX8_RVT)                               0.05      0.00 *     1.73 r
+  shrinker/U5/Y (INVX8_RVT)                    11.09      0.03      0.03       1.76 f
+  shrinker/U19/A3 (OA221X1_RVT)                           0.03      0.00 *     1.76 f
+  shrinker/U19/Y (OA221X1_RVT)                  1.13      0.04      0.11       1.87 f
+  shrinker/U21/A1 (OR2X2_RVT)                             0.04      0.00 *     1.87 f
+  shrinker/U21/Y (OR2X2_RVT)                    6.01      0.04      0.10       1.97 f
+  shrinker/auto_in_d_bits_source[6] (TLSourceShrinker)              0.00       1.97 f
+  ww/auto_out_d_bits_source[6] (TLWidthWidget_8)                    0.00       1.97 f
+  ww/auto_in_d_bits_source[6] (TLWidthWidget_8)                     0.00       1.97 f
+  bh/auto_out_d_bits_source[6] (TLBroadcast)                        0.00       1.97 f
+  bh/U922/A (INVX4_RVT)                                   0.04      0.00 *     1.97 f
+  bh/U922/Y (INVX4_RVT)                         3.83      0.02      0.03       2.00 r
+  bh/U916/A1 (NAND2X0_RVT)                                0.02      0.00 *     2.00 r
+  bh/U916/Y (NAND2X0_RVT)                       1.34      0.05      0.04       2.05 f
+  bh/U532/A2 (AND2X1_RVT)                                 0.05      0.00 *     2.05 f
+  bh/U532/Y (AND2X1_RVT)                        2.69      0.04      0.09       2.13 f
+  bh/U537/A2 (OA221X1_RVT)                                0.04      0.00 *     2.13 f
+  bh/U537/Y (OA221X1_RVT)                       4.62      0.07      0.14       2.28 f
+  bh/U543/A1 (AO21X1_RVT)                                 0.07      0.00 *     2.28 f
+  bh/U543/Y (AO21X1_RVT)                        3.91      0.05      0.12       2.40 f
+  bh/auto_in_d_bits_source[4] (TLBroadcast)                         0.00       2.40 f
+  sbus/auto_system_bus_xbar_out_d_bits_source[4] (SystemBus) <-     0.00       2.40 f
+  sbus/system_bus_xbar/auto_out_2_d_bits_source[4] (TLXbar)         0.00       2.40 f
+  sbus/system_bus_xbar/U589/A2 (NAND3X0_RVT)              0.05      0.00 *     2.40 f
+  sbus/system_bus_xbar/U589/Y (NAND3X0_RVT)     1.55      0.05      0.06       2.46 r
+  sbus/system_bus_xbar/U573/A3 (AO22X1_RVT)               0.05      0.00 *     2.46 r
+  sbus/system_bus_xbar/U573/Y (AO22X1_RVT)      1.27      0.04      0.08       2.55 r
+  sbus/system_bus_xbar/U740/A4 (OA221X1_RVT)              0.04      0.00 *     2.55 r
+  sbus/system_bus_xbar/U740/Y (OA221X1_RVT)     0.93      0.04      0.10       2.64 r
+  sbus/system_bus_xbar/U742/A4 (OA222X2_RVT)              0.04      0.00 *     2.64 r
+  sbus/system_bus_xbar/U742/Y (OA222X2_RVT)     6.07      0.07      0.15       2.79 r
+  sbus/system_bus_xbar/auto_out_0_d_ready (TLXbar)                  0.00       2.79 r
+  sbus/coupler_to_port_named_mmio_port_axi4/auto_buffer_in_d_ready (SimpleLazyModule_1)
+                                                                    0.00       2.79 r
+  sbus/coupler_to_port_named_mmio_port_axi4/buffer/auto_in_d_ready (TLBuffer_1)
+                                                                    0.00       2.79 r
+  sbus/coupler_to_port_named_mmio_port_axi4/buffer/auto_out_d_ready (TLBuffer_1)
+                                                                    0.00       2.79 r
+  sbus/coupler_to_port_named_mmio_port_axi4/widget/auto_in_d_ready (TLWidthWidget)
+                                                                    0.00       2.79 r
+  sbus/coupler_to_port_named_mmio_port_axi4/widget/auto_out_d_ready (TLWidthWidget)
+                                                                    0.00       2.79 r
+  sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/auto_in_d_ready (TLToAXI4)
+                                                                    0.00       2.79 r
+  sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/U18/A (NBUFFX32_RVT)
+                                                          0.07      0.00 *     2.79 r
+  sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/U18/Y (NBUFFX32_RVT)
+                                               48.24      0.04      0.09       2.88 r
+  sbus/coupler_to_port_named_mmio_port_axi4/tl2axi4/auto_out_r_ready (TLToAXI4)
+                                                                    0.00       2.88 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4index/auto_in_r_ready (AXI4IdIndexer)
+                                                                    0.00       2.88 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4index/auto_out_r_ready (AXI4IdIndexer)
+                                                                    0.00       2.88 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/auto_in_r_ready (AXI4Deinterleaver)
+                                                                    0.00       2.88 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U443/A1 (AND2X2_RVT)
+                                                          0.04      0.02 *     2.90 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U443/Y (AND2X2_RVT)
+                                                5.19      0.05      0.09       2.98 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U462/A1 (AND2X1_RVT)
+                                                          0.05      0.00 *     2.98 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U462/Y (AND2X1_RVT)
+                                                2.72      0.04      0.08       3.06 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U683/A1 (AND2X2_RVT)
+                                                          0.04      0.00 *     3.06 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U683/Y (AND2X2_RVT)
+                                                8.93      0.06      0.10       3.16 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U685/CI (FADDX1_RVT)
+                                                          0.06      0.00 *     3.16 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U685/CO (FADDX1_RVT)
+                                                2.17      0.06      0.12       3.28 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U458/A3 (AO22X1_RVT)
+                                                          0.06      0.00 *     3.28 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U458/Y (AO22X1_RVT)
+                                                1.78      0.04      0.09       3.37 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U455/A3 (AO22X1_RVT)
+                                                          0.04      0.00 *     3.37 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U455/Y (AO22X1_RVT)
+                                                1.55      0.04      0.08       3.45 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U691/A1 (XOR2X2_RVT)
+                                                          0.04      0.00 *     3.45 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U691/Y (XOR2X2_RVT)
+                                                1.30      0.04      0.12       3.57 f
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U693/A1 (NOR4X0_RVT)
+                                                          0.04      0.00 *     3.57 f
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U693/Y (NOR4X0_RVT)
+                                                1.66      0.03      0.16       3.73 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U468/A1 (NAND2X0_RVT)
+                                                          0.03      0.00 *     3.73 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U468/Y (NAND2X0_RVT)
+                                                1.47      0.07      0.05       3.78 f
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U437/A (INVX1_RVT)
+                                                          0.07      0.00 *     3.78 f
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U437/Y (INVX1_RVT)
+                                                0.71      0.03      0.04       3.82 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U444/A1 (NAND4X0_RVT)
+                                                          0.03      0.00 *     3.82 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U444/Y (NAND4X0_RVT)
+                                                1.57      0.10      0.08       3.90 f
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U711/A2 (OAI22X1_RVT)
+                                                          0.10      0.00 *     3.90 f
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/U711/Y (OAI22X1_RVT)
+                                                0.69      0.02      0.13       4.03 r
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/u_T_14_reg_2_/D (SDFFX1_RVT)
+                                                          0.02      0.00 *     4.03 r
+  data arrival time                                                            4.03
+
+  clock clock (rise edge)                                           3.50       3.50
+  clock network delay (ideal)                                       0.90       4.40
+  clock uncertainty                                                -0.16       4.24
+  sbus/coupler_to_port_named_mmio_port_axi4/axi4deint/u_T_14_reg_2_/CLK (SDFFX1_RVT)
+                                                                    0.00       4.24 r
+  library setup time                                               -0.12       4.12
+  data required time                                                           4.12
+  ------------------------------------------------------------------------------------
+  data required time                                                           4.12
+  data arrival time                                                           -4.03
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  0.09
+
+
+1

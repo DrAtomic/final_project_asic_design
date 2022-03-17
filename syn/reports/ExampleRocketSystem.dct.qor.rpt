@@ -5,15 +5,15 @@ Warning: Design 'ExampleRocketSystem' contains 18 high-fanout nets. A fanout num
 Report : qor
 Design : ExampleRocketSystem
 Version: Q-2019.12-SP3
-Date   : Sun Mar  6 14:13:20 2022
+Date   : Thu Mar 10 21:23:11 2022
 ****************************************
 
 
   Timing Path Group 'INPUTS'
   -----------------------------------
-  Levels of Logic:              32.00
-  Critical Path Length:          3.09
-  Critical Path Slack:           0.13
+  Levels of Logic:              33.00
+  Critical Path Length:          3.13
+  Critical Path Slack:           0.09
   Critical Path Clk Period:      3.50
   Total Negative Slack:          0.00
   No. of Violating Paths:        0.00
@@ -24,9 +24,9 @@ Date   : Sun Mar  6 14:13:20 2022
 
   Timing Path Group 'OUTPUTS'
   -----------------------------------
-  Levels of Logic:              25.00
-  Critical Path Length:          2.77
-  Critical Path Slack:           0.57
+  Levels of Logic:              23.00
+  Critical Path Length:          2.75
+  Critical Path Slack:           0.58
   Critical Path Clk Period:      3.50
   Total Negative Slack:          0.00
   No. of Violating Paths:        0.00
@@ -37,12 +37,12 @@ Date   : Sun Mar  6 14:13:20 2022
 
   Timing Path Group 'clock'
   -----------------------------------
-  Levels of Logic:              38.00
-  Critical Path Length:          3.32
-  Critical Path Slack:          -0.10
+  Levels of Logic:              42.00
+  Critical Path Length:          3.26
+  Critical Path Slack:          -0.03
   Critical Path Clk Period:      3.50
-  Total Negative Slack:        -67.06
-  No. of Violating Paths:     1480.00
+  Total Negative Slack:         -1.47
+  No. of Violating Paths:      144.00
   Worst Hold Violation:          0.00
   Total Hold Violation:          0.00
   No. of Hold Violations:        0.00
@@ -52,13 +52,13 @@ Date   : Sun Mar  6 14:13:20 2022
   Cell Count
   -----------------------------------
   Hierarchical Cell Count:        481
-  Hierarchical Port Count:      69577
-  Leaf Cell Count:             151683
-  Buf/Inv Cell Count:           22955
-  Buf Cell Count:                9697
-  Inv Cell Count:               13258
+  Hierarchical Port Count:      69537
+  Leaf Cell Count:             151319
+  Buf/Inv Cell Count:           22463
+  Buf Cell Count:                9280
+  Inv Cell Count:               13183
   CT Buf/Inv Cell Count:            0
-  Combinational Cell Count:    125787
+  Combinational Cell Count:    125423
   Sequential Cell Count:        25896
   Macro Count:                      0
   -----------------------------------
@@ -66,28 +66,28 @@ Date   : Sun Mar  6 14:13:20 2022
 
   Area
   -----------------------------------
-  Combinational Area:   328305.000114
+  Combinational Area:   326502.102596
   Noncombinational Area:
-                        224834.840375
-  Buf/Inv Area:          56646.157015
-  Total Buffer Area:         36131.65
-  Total Inverter Area:       20514.50
+                        224882.619482
+  Buf/Inv Area:          54367.756034
+  Total Buffer Area:         33994.81
+  Total Inverter Area:       20372.95
   Macro/Black Box Area: 990214.207031
   Net Area:                  0.000000
-  Net XLength        :     3753887.50
-  Net YLength        :     2725710.75
+  Net XLength        :     3388406.00
+  Net YLength        :     2994662.25
   -----------------------------------
-  Cell Area:           1543354.047520
-  Design Area:         1543354.047520
-  Net Length        :      6479598.00
+  Cell Area:           1541598.929109
+  Design Area:         1541598.929109
+  Net Length        :      6383068.00
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:        160966
-  Nets With Violations:           524
-  Max Trans Violations:           270
-  Max Cap Violations:             374
+  Total Number of Nets:        160584
+  Nets With Violations:           579
+  Max Trans Violations:           272
+  Max Cap Violations:             437
   -----------------------------------
 
 
@@ -95,16 +95,16 @@ Date   : Sun Mar  6 14:13:20 2022
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                   69.81
-  Logic Optimization:                289.92
-  Mapping Optimization:             1227.75
+  Resource Sharing:                   69.73
+  Logic Optimization:                294.22
+  Mapping Optimization:             1194.72
   -----------------------------------------
-  Overall Compile Time:             2424.23
-  Overall Compile Wall Clock Time:  1168.29
+  Overall Compile Time:             2408.49
+  Overall Compile Wall Clock Time:  1178.99
 
   --------------------------------------------------------------------
 
-  Design  WNS: 0.10  TNS: 67.06  Number of Violating Paths: 1480
+  Design  WNS: 0.03  TNS: 1.47  Number of Violating Paths: 144
 
 
   Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0

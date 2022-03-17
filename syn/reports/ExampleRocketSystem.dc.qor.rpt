@@ -5,7 +5,7 @@ Warning: Design 'ExampleRocketSystem' contains 19 high-fanout nets. A fanout num
 Report : qor
 Design : ExampleRocketSystem
 Version: Q-2019.12-SP3
-Date   : Sun Mar  6 13:44:51 2022
+Date   : Thu Mar 10 18:05:04 2022
 ****************************************
 
 
@@ -92,12 +92,12 @@ Date   : Sun Mar  6 13:44:51 2022
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                  113.53
-  Logic Optimization:                327.37
-  Mapping Optimization:              752.18
+  Resource Sharing:                  117.69
+  Logic Optimization:                330.06
+  Mapping Optimization:              774.96
   -----------------------------------------
-  Overall Compile Time:             1986.91
-  Overall Compile Wall Clock Time:  1060.51
+  Overall Compile Time:             2036.36
+  Overall Compile Wall Clock Time:  1082.77
 
   --------------------------------------------------------------------
 

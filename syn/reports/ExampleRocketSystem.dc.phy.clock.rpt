@@ -1,0 +1,122 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -input_pins
+        -max_paths 1
+        -transition_time
+        -capacitance
+Design : ExampleRocketSystem
+Version: Q-2019.12-SP3
+Date   : Wed Mar 16 20:34:28 2022
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss0p95vn40c   Library: saed32rvt_ss0p95vn40c
+Wire Load Model Mode: enclosed
+
+  Startpoint: tile/core/csr/reg_pmp_7_addr_reg_0_
+              (rising edge-triggered flip-flop clocked by clock)
+  Endpoint: tile/frontend/tlb/sectored_entries_3_data_0_reg_6_
+            (rising edge-triggered flip-flop clocked by clock)
+  Path Group: clock
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  ExampleRocketSystem
+                     2000000               saed32rvt_ss0p95vn40c
+  RocketTile         2000000               saed32rvt_ss0p95vn40c
+  CSRFile            35000                 saed32rvt_ss0p95vn40c
+  PMPChecker_1       8000                  saed32rvt_ss0p95vn40c
+  TLB_1              35000                 saed32rvt_ss0p95vn40c
+
+  Point                                          Cap     Trans      Incr       Path
+  ------------------------------------------------------------------------------------
+  clock clock (rise edge)                                           0.00       0.00
+  clock network delay (ideal)                                       0.90       0.90
+  tile/core/csr/reg_pmp_7_addr_reg_0_/CLK (SDFFX1_RVT)
+                                                          0.13      0.00 #     0.90 r
+  tile/core/csr/reg_pmp_7_addr_reg_0_/Q (SDFFX1_RVT)
+                                                5.66      0.07      0.24       1.14 r
+  tile/core/csr/U760/A2 (NAND2X0_RVT)                     0.07      0.00       1.14 r
+  tile/core/csr/U760/Y (NAND2X0_RVT)            1.19      0.06      0.06       1.20 f
+  tile/core/csr/U762/A1 (NOR2X1_RVT)                      0.06      0.00       1.20 f
+  tile/core/csr/U762/Y (NOR2X1_RVT)             2.28      0.03      0.11       1.32 r
+  tile/core/csr/U766/A1 (NAND2X0_RVT)                     0.03      0.00       1.32 r
+  tile/core/csr/U766/Y (NAND2X0_RVT)            1.19      0.05      0.05       1.36 f
+  tile/core/csr/U298/A1 (NOR2X1_RVT)                      0.05      0.00       1.36 f
+  tile/core/csr/U298/Y (NOR2X1_RVT)             2.22      0.03      0.11       1.47 r
+  tile/core/csr/U1409/A2 (AND2X1_RVT)                     0.03      0.00       1.47 r
+  tile/core/csr/U1409/Y (AND2X1_RVT)            2.06      0.04      0.07       1.54 r
+  tile/core/csr/U2315/B0 (HADDX1_RVT)                     0.04      0.00       1.54 r
+  tile/core/csr/U2315/C1 (HADDX1_RVT)           1.00      0.03      0.07       1.61 r
+  tile/core/csr/U2317/B0 (HADDX1_RVT)                     0.03      0.00       1.61 r
+  tile/core/csr/U2317/C1 (HADDX1_RVT)           1.00      0.03      0.07       1.68 r
+  tile/core/csr/U2319/B0 (HADDX1_RVT)                     0.03      0.00       1.68 r
+  tile/core/csr/U2319/C1 (HADDX1_RVT)           1.00      0.03      0.07       1.75 r
+  tile/core/csr/U2321/B0 (HADDX1_RVT)                     0.03      0.00       1.75 r
+  tile/core/csr/U2321/C1 (HADDX1_RVT)           1.00      0.03      0.07       1.82 r
+  tile/core/csr/U2323/B0 (HADDX1_RVT)                     0.03      0.00       1.82 r
+  tile/core/csr/U2323/C1 (HADDX1_RVT)           1.00      0.03      0.07       1.89 r
+  tile/core/csr/U2325/B0 (HADDX1_RVT)                     0.03      0.00       1.89 r
+  tile/core/csr/U2325/C1 (HADDX1_RVT)           1.00      0.03      0.07       1.96 r
+  tile/core/csr/U2327/B0 (HADDX1_RVT)                     0.03      0.00       1.96 r
+  tile/core/csr/U2327/SO (HADDX1_RVT)           0.70      0.03      0.11       2.08 f
+  tile/core/csr/U2326/A2 (NOR2X1_RVT)                     0.03      0.00       2.08 f
+  tile/core/csr/U2326/Y (NOR2X1_RVT)            1.07      0.02      0.08       2.16 r
+  tile/core/csr/io_pmp_7_mask[29] (CSRFile)                         0.00       2.16 r
+  tile/core/io_ptw_pmp_7_mask[29] (Rocket)                          0.00       2.16 r
+  tile/ptw/io_dpath_pmp_7_mask[29] (PTW)                            0.00       2.16 r
+  tile/ptw/io_requestor_1_pmp_7_mask[29] (PTW) <-                   0.00       2.16 r
+  tile/frontend/io_ptw_pmp_7_mask[29] (Frontend)                    0.00       2.16 r
+  tile/frontend/tlb/io_ptw_pmp_7_mask[29] (TLB_1)                   0.00       2.16 r
+  tile/frontend/tlb/pmp/io_pmp_7_mask[29] (PMPChecker_1)            0.00       2.16 r
+  tile/frontend/tlb/pmp/U517/A1 (OA21X1_RVT)              0.02      0.00       2.16 r
+  tile/frontend/tlb/pmp/U517/Y (OA21X1_RVT)     0.47      0.03      0.07       2.23 r
+  tile/frontend/tlb/pmp/U518/A3 (OA21X1_RVT)              0.03      0.00       2.23 r
+  tile/frontend/tlb/pmp/U518/Y (OA21X1_RVT)     0.47      0.03      0.06       2.30 r
+  tile/frontend/tlb/pmp/U519/A3 (OA21X1_RVT)              0.03      0.00       2.30 r
+  tile/frontend/tlb/pmp/U519/Y (OA21X1_RVT)     0.52      0.03      0.06       2.36 r
+  tile/frontend/tlb/pmp/U85/A2 (MUX21X1_RVT)              0.03      0.00       2.36 r
+  tile/frontend/tlb/pmp/U85/Y (MUX21X1_RVT)     0.55      0.04      0.09       2.45 r
+  tile/frontend/tlb/pmp/U520/A2 (AND2X1_RVT)              0.04      0.00       2.45 r
+  tile/frontend/tlb/pmp/U520/Y (AND2X1_RVT)     1.12      0.03      0.07       2.51 r
+  tile/frontend/tlb/pmp/U521/A3 (AOI22X1_RVT)             0.03      0.00       2.51 r
+  tile/frontend/tlb/pmp/U521/Y (AOI22X1_RVT)
+                                                0.56      0.02      0.09       2.60 f
+  tile/frontend/tlb/pmp/U525/A1 (NAND2X0_RVT)             0.02      0.00       2.60 f
+  tile/frontend/tlb/pmp/U525/Y (NAND2X0_RVT)
+                                                0.62      0.04      0.04       2.63 r
+  tile/frontend/tlb/pmp/U1322/A1 (NAND3X0_RVT)            0.04      0.00       2.63 r
+  tile/frontend/tlb/pmp/U1322/Y (NAND3X0_RVT)
+                                                0.68      0.05      0.05       2.69 f
+  tile/frontend/tlb/pmp/U1338/A1 (NAND4X0_RVT)            0.05      0.00       2.69 f
+  tile/frontend/tlb/pmp/U1338/Y (NAND4X0_RVT)
+                                                1.20      0.06      0.06       2.75 r
+  tile/frontend/tlb/pmp/io_x (PMPChecker_1)                         0.00       2.75 r
+  tile/frontend/tlb/U4/A1 (AND2X4_RVT)                    0.06      0.00       2.75 r
+  tile/frontend/tlb/U4/Y (AND2X4_RVT)          19.78      0.08      0.13       2.88 r
+  tile/frontend/tlb/U2402/A2 (MUX21X1_RVT)                0.08      0.00       2.88 r
+  tile/frontend/tlb/U2402/Y (MUX21X1_RVT)       0.51      0.04      0.11       2.98 r
+  tile/frontend/tlb/sectored_entries_3_data_0_reg_6_/D (SDFFX1_RVT)
+                                                          0.04      0.00       2.98 r
+  data arrival time                                                            2.98
+
+  clock clock (rise edge)                                           3.50       3.50
+  clock network delay (ideal)                                       0.90       4.40
+  clock uncertainty                                                -0.16       4.24
+  tile/frontend/tlb/sectored_entries_3_data_0_reg_6_/CLK (SDFFX1_RVT)
+                                                                    0.00       4.24 r
+  library setup time                                               -0.12       4.12
+  data required time                                                           4.12
+  ------------------------------------------------------------------------------------
+  data required time                                                           4.12
+  data arrival time                                                           -2.98
+  ------------------------------------------------------------------------------------
+  slack (MET)                                                                  1.13
+
+
+1
