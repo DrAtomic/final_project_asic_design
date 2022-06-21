@@ -1,3 +1,8 @@
+# Description
+
+Project for asic design.
+Write up can be found [here](project.pdf)
+
 # PSU_RTL2GDS 
 
 This GIT repository:  https://github.com/bcruik2/PSU_RTL2GDS.git
